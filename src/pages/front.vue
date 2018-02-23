@@ -180,7 +180,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <!-- <section class="section">
       <div class="container">
         <div class="section-bg section-header-bg"></div>
         <div class="section-bg section-content-bg"></div>
@@ -221,7 +221,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="section">
       <div class="container">
         <div class="section-bg section-header-bg"></div>
