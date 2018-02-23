@@ -306,45 +306,52 @@
 </template>
 
 <script>
+  import data from '../../static/resume.json'
+  console.log(data)
   export default {
     name: 'front',
     data() {
       return {
-        userInfo: {
-          exp:[],
-          qq:{},
-          intro:{
-            content:[],
-            technology:{
-              title:'',
-              content:[]
-            }
-          },
-          experience:[{
-            tips:{
-              title:'',
-              content:[],
-            },
-            technology:[],
-          }],
-          skill:[],
-          project:[{
-            tips:{
-              title:'',
-              content:[],
-            },
-            technology:[],
-          }],
-          usually:[],
-        },
+        userInfo: data
       }
+      // return {
+      //   userInfo: {
+      //     exp:[],
+      //     qq:{},
+      //     intro:{
+      //       content:[],
+      //       technology:{
+      //         title:'',
+      //         content:[]
+      //       }
+      //     },
+      //     experience:[{
+      //       tips:{
+      //         title:'',
+      //         content:[],
+      //       },
+      //       technology:[],
+      //     }],
+      //     skill:[],
+      //     project:[{
+      //       tips:{
+      //         title:'',
+      //         content:[],
+      //       },
+      //       technology:[],
+      //     }],
+      //     usually:[],
+      //   },
+      // }
     },
     created(){
-      var self = this;
-      this.$http.get('/static/resume.json').then((res) =>{
-        self.userInfo = res.body;
+
         this.$parent.loading = true;
-      });
+      // var self = this;
+      // this.$http.get('/static/resume.json').then((res) =>{
+      //   self.userInfo = res.body;
+      //   this.$parent.loading = true;
+      // });
     },
     methods:{
       calcDate(birthday){
